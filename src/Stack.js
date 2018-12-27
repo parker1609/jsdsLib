@@ -1,7 +1,7 @@
 "use strict";
 
-var Queue = (function () {
-    function Queue(dataArray) {
+var Stack = (function () {
+    function Stack(dataArray) {
         if (dataArray == null) {
             dataArray = [];
         }
@@ -10,45 +10,34 @@ var Queue = (function () {
         this._size = this._dataArray.length;
     }
 
-    Queue.prototype.clear = function() {
+    Stack.prototype.clear = function() {
         this._dataArray = [];
         this._size = 0;
     };
 
-    Queue.prototype.enqueue = function (element) {
+    Stack.prototype.push = function (element) {
         this._dataArray.push(element);
         this._size++;
         return element;
     };
 
-    Queue.prototype.dequeue = function () {
+    Stack.prototype.pop = function () {
         if (this._size === 0) {
             return null;
         }
-        var dequeueData = this._dataArray.shift();
+        var popData = this._dataArray.pop();
         this._size--;
-        return dequeueData;
+        return popData;
     };
 
-    Queue.prototype.empty = function () {
-        return (this._size === 0);
-    };
-
-    Queue.prototype.front = function () {
-        if (this._size === 0) {
-            return null;
-        }
-        return this._dataArray[0];
-    };
-
-    Queue.prototype.back = function () {
-        if (this._size === 0) {
+    Stack.prototype.peek = function () {
+        if(this._size === 0) {
             return null;
         }
         return this._dataArray[_size - 1];
     };
 
-    Queue.prototype.toString = function() {
+    Stack.prototype.toString = function() {
         var i, curData;
         var retStr = "[";
         for(i = 0; i < this._size; ++i) {
@@ -70,15 +59,17 @@ var Queue = (function () {
         return retStr;
     };
 
-    Queue.prototype.length = function() {
+    Stack.prototype.empty = function () {
+        return (this._size === 0);
+    };
+
+    Stack.prototype.length = function () {
         return this._size;
     };
 
-    Queue.prototype.size = Queue.prototype.length;
-    Queue.prototype.push = Queue.prototype.enqueue;
-    Queue.prototype.pop = Queue.prototype.dequeue;
-    
-    return Queue;
+    Stack.prototype.size = Stack.prototype.length;
+
+    return Stack;
 })();
 
-module.exports = Queue;
+module.exports = Stack;
