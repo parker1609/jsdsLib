@@ -34,7 +34,7 @@ var Stack = (function () {
         if(this._size === 0) {
             return null;
         }
-        return this._dataArray[_size - 1];
+        return this._dataArray[this._size - 1];
     };
 
     Stack.prototype.toString = function() {

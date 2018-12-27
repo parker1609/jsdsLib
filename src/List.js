@@ -18,7 +18,7 @@ var List = (function () {
     List.prototype.clear = function() {
         this._head.next = this._tail;
         this._head.prev = null;
-        this._tail.next - null;
+        this._tail.next = null;
         this._tail.prev = this._head;
         this._size = 0;
     };
@@ -89,8 +89,8 @@ var List = (function () {
     };
 
     List.prototype.insert_prev = function(newElement, item) {
-        var newNode = new Node(newelement);
-        var curNode = this.fine(item);
+        var newNode = new Node(newElement);
+        var curNode = this.find(item);
 
         if(curNode == null) {
             return null;
