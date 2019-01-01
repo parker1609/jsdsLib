@@ -2,11 +2,11 @@
 자바스크립트로 구현된 자료구조 라이브러리
 
 ## 자료구조 목록
-- [List](##List)
-- [Queue](##Queue)
-- [Stack](##Stack)
-- [Deque](##Deque)
-- [Priority Queue](##Priority Queue)
+- [List](##list)
+- [Queue](##queue)
+- [Stack](##stack)
+- [Deque](##deque)
+- [Priority Queue](##priority-queue)
 
 ## 라이브러리 설치
 
@@ -59,7 +59,7 @@ console.log(list1.toString());
   - [.remove()](###.remove())
   - [.merge()](###.merge())
   - [.toString()](###.toString())
-  - [.length(), .size()](###.length(), .size())
+  - [.length(), .size()](###.length(),-.size())
 
 ### .clear()
 리스트를 초기화한다.
