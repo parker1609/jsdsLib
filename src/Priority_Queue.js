@@ -40,7 +40,7 @@ var PriorityQueue = (function () {
     }
 
     PriorityQueue.prototype.defaultComp = function (a, b) {
-        return a < b ? -1 : a > b ? 1 : 0;
+        return a > b ? -1 : a < b ? 1 : 0;
     };
 
 
