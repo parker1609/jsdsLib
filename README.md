@@ -341,3 +341,203 @@ console.log(list.size());
 3
 3
 ```
+
+
+## Queue
+
+- 라이브러리 추가하기
+
+1. HTML
+```html
+<-- Used jsdelivr cdn -->
+<-- normal file -->
+<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/src/Queue.js"></script>
+<-- mini file -->
+<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/dist/Queue.min.js"></script>
+```
+
+2. npm
+```js
+var Queue = require("jsdslib").Queue;
+```
+
+- 초기화
+매개변수에 배열을 추가해서 초기화할 수 있다. 첫 번째 매개변수의 배열만 유효하고 나머지 매개변수는 무시한다.
+```js
+//방법 1
+var q = new Queue();
+console.log(q.toString());
+
+//방법 2
+var q = new Queue([1, 2, 3]);
+console.log(q.toString());
+```
+
+```
+[]
+[1, 2, 3]
+```
+
+- 매서드
+  - [.clear()](#clear)
+  - [.empty()](#empty)
+  - [.front()](#front)
+  - [.back()](#back)
+  - [.enqueue(), .push()](#enqueue-push)
+  - [.dequeue(), .pop()](#dequeue-pop)
+  - [.toString()](#toString)
+  - [.length(), .size()](#length-size)
+
+### .clear()
+큐를 초기화한다.
+
+- 예제
+
+```js
+var q = new Queue();
+q.enqueue(1);
+q.enqueue(2);
+q.enqueue(3);
+console.log(q.toString());
+q.clear();
+console.log(q.toString());
+```
+
+```
+[1, 2, 3]
+[]
+```
+
+### .empty()
+큐가 비어있는지 검사한다.
+- ```.empty()```
+  - Return Value: 큐가 비어있으면 true, 비어있지 않으면 false 반환
+- 예제
+
+```js
+var q = new Queue();
+q.enqueue(1);
+q.enqueue(2);
+q.enqueue(3);
+console.log(q.empty());
+q.clear();
+console.log(q.empty());
+```
+
+```
+false
+true
+```
+
+### .front()
+큐의 맨 앞 원소를 반환한다. (큐가 비어있으면 null 반환)
+- 예제
+
+```js
+var q = new Queue();
+q.enqueue(1);
+q.enqueue(2);
+q.enqueue(3);
+console.log(q.front());
+```
+
+```
+1
+```
+
+### .back()
+큐의 맨 앞 원소를 반환한다. (큐가 비어있으면 null 반환)
+- 예제
+
+```js
+var q = new Queue();
+q.enqueue(1);
+q.enqueue(2);
+q.enqueue(3);
+console.log(q.back());
+```
+
+```
+3
+```
+
+### .enqueue(), .push()
+큐 맨 뒤에 원소를 삽입한다. (```.push()```도 같은 기능을 한다.)
+- ```.enqueue(element)```
+  - element: 삽입할 원소
+  - Return Value: 삽입한 원소
+- 예제
+
+```js
+var q = new Queue();
+q.enqueue(1);
+q.enqueue(2);
+q.enqueue(3);
+console.log(q.toString());
+q.push(4);
+q.push(5);
+q.push(6);
+console.log(q.toString());
+```
+
+```
+[1, 2, 3]
+[1, 2, 3, 4, 5, 6]
+```
+
+### .dequeue(), .pop()
+큐 맨 앞의 원소를 삭제한다. (```.pop()```도 같은 기능을 한다.)
+- ```.dequeue()```
+  - Return Value: 큐가 비어있으면 null, 비어있지 않으면 해당 원소 반환
+- 예제
+
+```js
+var q = new Queue();
+q.enqueue(1);
+q.enqueue(2);
+q.enqueue(3);
+console.log(q.dequeue());
+console.log(q.dequeue());
+console.log(q.pop());
+```
+
+```
+1
+2
+3
+```
+
+### .toString()
+큐안의 전체 원소를 형식에 맞춰서 반환한다.
+- 예제
+
+```js
+var q = new Queue();
+q.enqueue(1);
+q.enqueue(2);
+q.enqueue(3);
+q.enqueue('Hello');
+console.log(q.toString());
+```
+
+```
+[1, 2, 3, 'Hello']
+```
+
+### .length(), .size()
+큐 길이를 반환한다.
+- 예제
+
+```js
+var q = new Queue();
+q.enqueue(1);
+q.enqueue(2);
+q.enqueue(3);
+console.log(q.length());
+console.log(q.size());
+```
+
+```
+3
+3
+```
