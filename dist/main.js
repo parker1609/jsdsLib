@@ -1,10 +1,10 @@
 (function () {
     module.exports = {
-        Queue: require('./Queue'),
-        Stack: require('./Stack'),
-        List: require('./List'),
-        Deque: require('./Deque'),
-        PriorityQueue: require('./Priority_Queue')
+        Queue: require('./Queue.min'),
+        Stack: require('./Stack.min'),
+        List: require('./List.min'),
+        Deque: require('./Deque.min'),
+        PriorityQueue: require('./Priority_Queue.min')
     };
 
 })();
