@@ -2,11 +2,11 @@
 자바스크립트로 구현된 자료구조 라이브러리
 
 ## 자료구조 목록
-- [List](## List)
-- [Queue](## Queue)
-- [Stack](## Stack)
-- [Deque](## Deque)
-- [Priority Queue](## Priority Queue)
+- [List](##List)
+- [Queue](##Queue)
+- [Stack](##Stack)
+- [Deque](##Deque)
+- [Priority Queue](##Priority Queue)
 
 ## 라이브러리 설치
 
@@ -47,19 +47,19 @@ console.log(list1.toString());
 ```
 
 - 매서드
-  - [.clear()](### .clear())
-  - [.find()](### .find())
-  - [.find_reverse()](### .find_reverse())
-  - [.push_front()](### .push_front())
-  - [.pop_front()](### .pop_front())
-  - [.push_back()](### .push_back())
-  - [.pop_back()](### .pop_back())
-  - [.insert()](### .insert())
-  - [.insert_prev()](### .insert_prev())
-  - [.remove()](### .remove())
-  - [.merge()](### .merge())
-  - [.toString()](### .toString())
-  - [.length(), .size()](### .length(), .size())
+  - [.clear()](###.clear())
+  - [.find()](###.find())
+  - [.find_reverse()](###.find_reverse())
+  - [.push_front()](###.push_front())
+  - [.pop_front()](###.pop_front())
+  - [.push_back()](###.push_back())
+  - [.pop_back()](###.pop_back())
+  - [.insert()](###.insert())
+  - [.insert_prev()](###.insert_prev())
+  - [.remove()](###.remove())
+  - [.merge()](###.merge())
+  - [.toString()](###.toString())
+  - [.length(), .size()](###.length(), .size())
 
 ### .clear()
 리스트를 초기화한다.
