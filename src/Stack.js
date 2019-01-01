@@ -2,7 +2,7 @@
 
 var Stack = (function () {
     function Stack(dataArray) {
-        if (dataArray == null) {
+        if (dataArray === undefined) {
             dataArray = [];
         }
 
@@ -17,7 +17,7 @@ var Stack = (function () {
 
     Stack.prototype.push = function (element) {
         this._dataArray.push(element);
-        this._size++;
+        (this._size)++;
         return element;
     };
 
@@ -26,7 +26,7 @@ var Stack = (function () {
             return null;
         }
         var popData = this._dataArray.pop();
-        this._size--;
+        (this._size)--;
         return popData;
     };
 
@@ -42,7 +42,7 @@ var Stack = (function () {
         var retStr = "[";
         for(i = 0; i < this._size; ++i) {
             curData = this._dataArray[i];
-            if(!!curData && curData === 'object') {
+            if(!!curData && typeof curData === 'object') {
                 retStr += "[" + curData + "]" ;
             }
             else if(!!curData && typeof curData === 'string') {

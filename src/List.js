@@ -58,6 +58,21 @@ var List = (function () {
         (this._size)++;
     };
 
+    List.prototype.pop_front = function() {
+        if(this._size === 0) {
+            return null;
+        }
+
+        var deleteNode = this._head.next;
+
+        deleteNode.next.prev = this._head;
+        this._head.next = deleteNode.next;
+
+        (this._size)--;
+
+        return deleteNode;
+    }
+
     List.prototype.push_back = function(newElement) {
         var newNode = new Node(newElement);
         var tailPrevNode = this._tail.prev;
@@ -70,6 +85,21 @@ var List = (function () {
 
         (this._size)++;
     };
+
+    List.prototype.pop_back = function() {
+        if(this._size === 0) {
+            return null;
+        }
+
+        var deleteNode = this._tail.prev;
+
+        deleteNode.prev.next = this._tail;
+        this._tail.prev = deleteNode.prev;
+
+        (this._size)--;
+
+        return deleteNode;
+    }
 
     List.prototype.insert = function(newElement, item) {
         var newNode = new Node(newElement);
@@ -141,7 +171,7 @@ var List = (function () {
         while(curNode !== this._tail) {
             curData = curNode.element;
 
-            if(!!curData && curData === 'object') {
+            if(!!curData && typeof curData === 'object') {
                 retStr += "[" + curData + "]" ;
             }
             else if(!!curData && typeof curData === 'string') {
