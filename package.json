@@ -1,0 +1,31 @@
+{
+  "name": "jsdslib",
+  "version": "1.0.0",
+  "description": "Javascript data structures library",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CODEMCD/jsdsLib.git"
+  },
+  "keywords": [
+    "jsdsLib",
+    "javascript",
+    "npm",
+    "datastructure",
+    "Queue",
+    "Stack",
+    "List",
+    "Dequeue",
+    "Priority_Queue",
+    "library"
+  ],
+  "author": "CODEMCD",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CODEMCD/jsdsLib/issues"
+  },
+  "homepage": "https://github.com/CODEMCD/jsdsLib#readme"
+}
