@@ -25,9 +25,9 @@ npm install -g jsdsLib      # global
 1. HTML
 ```html
 <-- Used jsdelivr cdn -->
-<-- normal file -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/src/List.js"></script>
-<-- mini file -->
+<-- npm -->
+ <script src="https://cdn.jsdelivr.net/npm/jsdslib@latest/dist/List.min.js"></script>
+<-- Github -->
 <script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/dist/List.min.js"></script>
 ```
 
@@ -351,9 +351,9 @@ console.log(list.size());
 1. HTML
 ```html
 <-- Used jsdelivr cdn -->
-<-- normal file -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/src/Queue.js"></script>
-<-- mini file -->
+<-- npm -->
+ <script src="https://cdn.jsdelivr.net/npm/jsdslib@latest/dist/Queue.min.js"></script>
+<-- Github -->
 <script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/dist/Queue.min.js"></script>
 ```
 
@@ -550,15 +550,15 @@ console.log(q.size());
 1. HTML
 ```html
 <-- Used jsdelivr cdn -->
-<-- normal file -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/src/Stack.js"></script>
-<-- mini file -->
+<-- npm -->
+<script src="https://cdn.jsdelivr.net/npm/jsdslib@latest/dist/Stack.min.js"></script>
+<-- Github -->
 <script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/dist/Stack.min.js"></script>
 ```
 
 2. npm
 ```js
-var Queue = require("jsdslib").Stack;
+var Stack = require("jsdslib").Stack;
 ```
 
 - 초기화
@@ -728,9 +728,9 @@ console.log(s.size());
 1. HTML
 ```html
 <-- Used jsdelivr cdn -->
-<-- normal file -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/src/Deque.js"></script>
-<-- mini file -->
+<-- npm -->
+<script src="https://cdn.jsdelivr.net/npm/jsdslib@latest/dist/Deque.min.js"></script>
+<-- Github -->
 <script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/dist/Deque.min.js"></script>
 ```
 
@@ -958,9 +958,9 @@ console.log(dq.size());
 1. HTML
 ```html
 <-- Used jsdelivr cdn -->
-<-- normal file -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/src/Priority_Queue.js"></script>
-<-- mini file -->
+<-- npm -->
+<script src="https://cdn.jsdelivr.net/npm/jsdslib@latest/dist/Priority_Queue.min.js"></script>
+<-- Github -->
 <script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/dist/Priority_Queue.min.js"></script>
 ```
 
