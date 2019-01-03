@@ -1,8 +1,12 @@
 # jsdsLib(javascript data structure Library)
+- Version: 1.1.0
 자바스크립트로 구현된 자료구조 라이브러리
 
-## Contents
+## Link
 - [자료구조 시각화 서비스](https://github.com/CODEMCD/jsdsLib-Visualization)
+- [라이브러리 상세 정보](https://codemcd.github.io/tags/toy-jsdslib)
+
+## Contents
 - [라이브러리 설치](#라이브러리-설치)
 - [List](#list)
 - [Queue](#queue)
@@ -26,9 +30,9 @@ npm install -g jsdsLib      # global
 ```html
 <-- Used jsdelivr cdn -->
 <-- npm -->
- <script src="https://cdn.jsdelivr.net/npm/jsdslib@latest/dist/List.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/jsdslib@1.1/dist/List.min.js"></script>
 <-- Github -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/dist/List.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.1/dist/List.min.js"></script>
 ```
 
 2. npm
@@ -352,9 +356,9 @@ console.log(list.size());
 ```html
 <-- Used jsdelivr cdn -->
 <-- npm -->
- <script src="https://cdn.jsdelivr.net/npm/jsdslib@latest/dist/Queue.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/jsdslib@1.1/dist/Queue.min.js"></script>
 <-- Github -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/dist/Queue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.1/dist/Queue.min.js"></script>
 ```
 
 2. npm
@@ -551,9 +555,9 @@ console.log(q.size());
 ```html
 <-- Used jsdelivr cdn -->
 <-- npm -->
-<script src="https://cdn.jsdelivr.net/npm/jsdslib@latest/dist/Stack.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsdslib@1.1/dist/Stack.min.js"></script>
 <-- Github -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/dist/Stack.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.1/dist/Stack.min.js"></script>
 ```
 
 2. npm
@@ -729,9 +733,9 @@ console.log(s.size());
 ```html
 <-- Used jsdelivr cdn -->
 <-- npm -->
-<script src="https://cdn.jsdelivr.net/npm/jsdslib@latest/dist/Deque.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsdslib@1.1/dist/Deque.min.js"></script>
 <-- Github -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/dist/Deque.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.1/dist/Deque.min.js"></script>
 ```
 
 2. npm
@@ -959,9 +963,9 @@ console.log(dq.size());
 ```html
 <-- Used jsdelivr cdn -->
 <-- npm -->
-<script src="https://cdn.jsdelivr.net/npm/jsdslib@latest/dist/Priority_Queue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsdslib@1.1/dist/Priority_Queue.min.js"></script>
 <-- Github -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@latest/dist/Priority_Queue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.1/dist/Priority_Queue.min.js"></script>
 ```
 
 2. npm
