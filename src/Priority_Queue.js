@@ -3,8 +3,9 @@
 var PriorityQueue = (function () {
     function PriorityQueue() {
         var argLen = arguments.length;
+        var i;
 
-        this._dataArray = [null];
+        this._dataArray = [];
         this._size = 0;
         if (argLen === 0) {
             this._comparator = this.defaultComp;
@@ -15,7 +16,7 @@ var PriorityQueue = (function () {
             }
             else {
                 this._comparator = this.defaultComp;
-                for (var i = 0; i < arguments[0].length; ++i) {
+                for (i = 0; i < arguments[0].length; ++i) {
                     this.enqueue(arguments[0][i]);
                 }
             }
@@ -23,13 +24,13 @@ var PriorityQueue = (function () {
         else if (argLen === 2) {
             if (typeof arguments[0] === 'function') {
                 this._comparator = arguments[0];
-                for (var i = 0; i < arguments[1].length; ++i) {
+                for (i = 0; i < arguments[1].length; ++i) {
                     this.enqueue(arguments[1][i]);
                 }
             }
             else if (typeof arguments[1] === 'function') {
                 this._comparator = arguments[1];
-                for (var i = 0; i < arguments[0].length; ++i) {
+                for (i = 0; i < arguments[0].length; ++i) {
                     this.enqueue(arguments[0][i]);
                 }
             }
@@ -45,7 +46,7 @@ var PriorityQueue = (function () {
 
 
     PriorityQueue.prototype.clear = function () {
-        this._dataArray = [null];
+        this._dataArray = [];
         this._size = 0;
     };
 
@@ -60,7 +61,7 @@ var PriorityQueue = (function () {
     PriorityQueue.prototype.toString = function () {
         var i, curData;
         var retStr = "[";
-        for (i = 1; i <= this._size; ++i) {
+        for (i = 0; i < this._size; ++i) {
             curData = this._dataArray[i];
             if (!!curData && typeof curData === 'object') {
                 retStr += "[" + curData + "]";
@@ -71,7 +72,7 @@ var PriorityQueue = (function () {
             else {
                 retStr += curData;
             }
-            if (i < this._size) {
+            if (i < this._size - 1) {
                 retStr += ", ";
             }
         }
@@ -79,38 +80,13 @@ var PriorityQueue = (function () {
         return retStr;
     };
 
-    PriorityQueue.prototype.getHighPriorityChildIdx = function (idx) {
-        if ((idx * 2) > this._size) {
-            return 0;
-        }
-        else if ((idx * 2) === this._size) {
-            return (idx * 2);
-        }
-        else {
-            if (this._comparator(this._dataArray[(idx * 2)], this._dataArray[(idx * 2 + 1)]) < 0) {
-                return (idx * 2 + 1);
-            }
-            else {
-                return (idx * 2);
-            }
-        }
-    };
-
-    PriorityQueue.prototype.getParentIdx = function (idx) {
-        if (idx % 2 === 0) {
-            return idx / 2;
-        }
-        else {
-            return idx / 2 - 0.5;
-        }
-    };
-
     PriorityQueue.prototype.enqueue = function (element) {
-        var idx = this._size + 1;
+        var idx = this._size;
+        this._dataArray.push(element);
         var parentIdx;
 
-        while (idx !== 1) {
-            parentIdx = this.getParentIdx(idx);
+        while (idx > 0) {
+            parentIdx = (idx - 1) >> 1;
             if (this._comparator(element, this._dataArray[parentIdx]) > 0) {
                 this._dataArray[idx] = this._dataArray[parentIdx];
                 idx = parentIdx;
@@ -126,27 +102,41 @@ var PriorityQueue = (function () {
     };
 
     PriorityQueue.prototype.dequeue = function () {
-        if (this.empty()) {
+        if (this._size <= 0) {
             return null;
         }
 
-        var retData = this._dataArray[1];
-        var lastElem = this._dataArray[this._size];
+        var retData = this._dataArray[0];
+        var lastElem = this._dataArray.pop();
+        (this._size)--;
 
-        var parentIdx = 1;
-        var childIdx;
+        if(this._size == 0) {
+            return retData;
+        }
 
-        while (childIdx = this.getHighPriorityChildIdx(parentIdx)) {
-            if (this._comparator(lastElem, this._dataArray[childIdx]) >= 0) {
+        var parentIdx = 0;
+        var bestChild, right, left;
+
+        while (1) {
+            left = (parentIdx << 1) + 1;
+            if(left >= this._size) {
+                break;
+            }
+            bestChild = left;
+            right = left + 1;
+
+            if(right < this._size && this._comparator(this._dataArray[right], this._dataArray[left]) > 0) {
+                bestChild = right;
+            }
+            if (this._comparator(this._dataArray[bestChild], lastElem) < 0) {
                 break;
             }
 
-            this._dataArray[parentIdx] = this._dataArray[childIdx];
-            parentIdx = childIdx;
+            this._dataArray[parentIdx] = this._dataArray[bestChild];
+            parentIdx = bestChild;
         }
 
         this._dataArray[parentIdx] = lastElem;
-        (this._size)--;
         return retData;
     };
 

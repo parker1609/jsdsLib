@@ -1,6 +1,6 @@
 {
   "name": "jsdslib",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Javascript data structures library",
   "main": "dist/main.js",
   "scripts": {
@@ -18,12 +18,12 @@
     "Queue",
     "Stack",
     "List",
-    "Dequeue",
+    "Deque",
     "Priority_Queue",
     "library"
   ],
   "author": "CODEMCD",
-  "license": "FreeBSD",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/CODEMCD/jsdsLib/issues"
   },
