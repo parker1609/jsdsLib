@@ -31,9 +31,9 @@ npm install -g jsdsLib      # global
 ```html
 <-- Used jsdelivr cdn -->
 <-- npm -->
- <script src="https://cdn.jsdelivr.net/npm/jsdslib@1.1/dist/List.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/jsdslib@1.2/dist/List.min.js"></script>
 <-- Github -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.1/dist/List.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.2/dist/List.min.js"></script>
 ```
 
 2. npm
@@ -357,9 +357,9 @@ console.log(list.size());
 ```html
 <-- Used jsdelivr cdn -->
 <-- npm -->
- <script src="https://cdn.jsdelivr.net/npm/jsdslib@1.1/dist/Queue.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/jsdslib@1.2/dist/Queue.min.js"></script>
 <-- Github -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.1/dist/Queue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.2/dist/Queue.min.js"></script>
 ```
 
 2. npm
@@ -556,9 +556,9 @@ console.log(q.size());
 ```html
 <-- Used jsdelivr cdn -->
 <-- npm -->
-<script src="https://cdn.jsdelivr.net/npm/jsdslib@1.1/dist/Stack.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsdslib@1.2/dist/Stack.min.js"></script>
 <-- Github -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.1/dist/Stack.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.2/dist/Stack.min.js"></script>
 ```
 
 2. npm
@@ -734,9 +734,9 @@ console.log(s.size());
 ```html
 <-- Used jsdelivr cdn -->
 <-- npm -->
-<script src="https://cdn.jsdelivr.net/npm/jsdslib@1.1/dist/Deque.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsdslib@1.2/dist/Deque.min.js"></script>
 <-- Github -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.1/dist/Deque.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.2/dist/Deque.min.js"></script>
 ```
 
 2. npm
@@ -964,9 +964,9 @@ console.log(dq.size());
 ```html
 <-- Used jsdelivr cdn -->
 <-- npm -->
-<script src="https://cdn.jsdelivr.net/npm/jsdslib@1.1/dist/Priority_Queue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsdslib@1.2/dist/Priority_Queue.min.js"></script>
 <-- Github -->
-<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.1/dist/Priority_Queue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CODEMCD/jsdsLib@1.2/dist/Priority_Queue.min.js"></script>
 ```
 
 2. npm
